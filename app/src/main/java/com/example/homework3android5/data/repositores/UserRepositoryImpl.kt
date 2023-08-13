@@ -4,7 +4,7 @@ import com.example.homework3android5.data.local.sharedpreferances.UserPreference
 import com.example.homework3android5.domain.repositores.UserRepository
 import javax.inject.Inject
 
-class UserRepositoryImp @Inject constructor(private val preferences: UserPreferenceHelper) :
+class UserRepositoryImpl @Inject constructor(private val preferences: UserPreferenceHelper) :
     UserRepository {
 
     override fun getUserInfo() = listOf(
@@ -13,7 +13,7 @@ class UserRepositoryImp @Inject constructor(private val preferences: UserPrefere
         preferences.userPassword.toString()
     )
 
-    override fun sighnUpUser(name: String, email: String, password: String) {
+    override fun signUpUser(name: String, email: String, password: String) {
         preferences.apply {
             userName = name
             userEmail = email

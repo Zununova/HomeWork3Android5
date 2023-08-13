@@ -4,5 +4,5 @@ interface UserRepository {
 
     fun getUserInfo(): List<String>
 
-    fun sighnUpUser(name: String, email: String, password: String)
+    fun signUpUser(name: String, email: String, password: String)
 }

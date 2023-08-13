@@ -6,6 +6,6 @@ import javax.inject.Inject
 class SignUpUseCase @Inject constructor(private val repository: UserRepository) {
 
     operator fun invoke(name: String, email: String, password: String) =
-        repository.sighnUpUser(name, email, password)
+        repository.signUpUser(name, email, password)
 
 }

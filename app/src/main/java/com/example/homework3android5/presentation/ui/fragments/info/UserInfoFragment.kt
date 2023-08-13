@@ -10,6 +10,7 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class UserInfoFragment :
     BaseFragment<FragmentUserInfoBinding, UserInfoViewModel>(R.layout.fragment_user_info) {
+
     override val binding: FragmentUserInfoBinding by viewBinding()
     override val viewModel: UserInfoViewModel by viewModels()
 

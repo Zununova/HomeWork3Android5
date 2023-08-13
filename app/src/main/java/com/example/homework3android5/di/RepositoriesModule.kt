@@ -1,6 +1,6 @@
 package com.example.homework3android5.di
 
-import com.example.homework3android5.data.repositores.UserRepositoryImp
+import com.example.homework3android5.data.repositores.UserRepositoryImpl
 import com.example.homework3android5.domain.repositores.UserRepository
 import dagger.Binds
 import dagger.Module
@@ -9,8 +9,8 @@ import dagger.hilt.android.components.ViewModelComponent
 
 @Module
 @InstallIn(ViewModelComponent::class)
-interface RepositoresModule {
+interface RepositoriesModule {
 
     @Binds
-    fun bindUserRepository( repositoryImp: UserRepositoryImp) : UserRepository
+    fun bindUserRepository(repositoryImp: UserRepositoryImpl): UserRepository
 }

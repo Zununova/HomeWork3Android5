@@ -9,18 +9,18 @@ import javax.inject.Singleton
 @Singleton
 class UserPreferenceHelper @Inject constructor(@ApplicationContext context: Context) {
 
-    private val sharedePreference: SharedPreferences =
+    private val sharedPreference: SharedPreferences =
         context.getSharedPreferences("user_preference", Context.MODE_PRIVATE)
 
     var userName: String?
-        get() = sharedePreference.getString("userName", "")
-        set(value) = sharedePreference.edit().putString("userName", value).apply()
+        get() = sharedPreference.getString("userName", "")
+        set(value) = sharedPreference.edit().putString("userName", value).apply()
 
     var userEmail: String?
-        get() = sharedePreference.getString("userEmail", "")
-        set(value) = sharedePreference.edit().putString("userEmail", value).apply()
+        get() = sharedPreference.getString("userEmail", "")
+        set(value) = sharedPreference.edit().putString("userEmail", value).apply()
 
     var userPassword: String?
-        get() = sharedePreference.getString("userPassword", "")
-        set(value) = sharedePreference.edit().putString("userPassword", value).apply()
+        get() = sharedPreference.getString("userPassword", "")
+        set(value) = sharedPreference.edit().putString("userPassword", value).apply()
 }
